@@ -11,12 +11,14 @@ $stone-orange: #EF4623;
 
 h1,h2,h3,h4,h5,h6
   {
-    font-family: 'Source Sans Pro';
+    font-family: "bello-pro";
     font-weight: 300;
-    text-transform: uppercase;
-    color: #777;
+    color: #333;
   }
 
+h3{
+  font-size: 36pt;
+}
 
 p
   {
@@ -47,6 +49,11 @@ a:hover{
   text-align: center;
 }
 
+.menu-label{
+  font-family: "trajan-pro-3";
+  font-size: 16pt;
+  font-weight: 200;
+}
 .header-logo{
   margin-top: 4em;
   margin-left: auto;
@@ -90,6 +97,7 @@ a:hover{
 .btn{
   border: 1px solid $stone-orange;
   margin: 1em;
+  font-family: "bello-pro";
 }
 
 .btn-default:hover, .btn-default:focus{
@@ -114,7 +122,6 @@ a:hover{
 
 .navbar-nav > li > a{
   color: $stone-blue !important;
-  text-transform: uppercase;
   border-bottom: none;
 }
 
@@ -123,8 +130,8 @@ a:hover{
           display: inline-block;
           background: #86D0CB;
           color: #FFF;
-          width: 1.65em;
-          height: 1.65em;
+          width: 1em;
+          height: 1em;
           border-radius: 1.65em;
           line-height: 1.65em;
           text-align: center;
@@ -183,7 +190,7 @@ a:hover{
       margin-bottom: 2em;
       padding: 10px;
       border-radius: 6px;
-      border: solid 6px #86D0CB !important;
+      border: solid 3px #86D0CB !important;
       -moz-transition: opacity 0.25s ease-in-out;
       -webkit-transition: opacity 0.25s ease-in-out;
       -o-transition: opacity 0.25s ease-in-out;
