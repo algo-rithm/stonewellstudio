@@ -11,19 +11,29 @@ $stone-orange: #EF4623;
 
 h1,h2,h3,h4,h5,h6
   {
-    font-family: "bello-pro";
+    font-family: "museo-slab";
     font-weight: 300;
     color: #333;
+    margin-top: 5px;
+    margin-bottom: 1em;
   }
 
-h3{
+h2{
   font-size: 36pt;
+}
+
+h3{
+  font-size: 24pt;
 }
 
 p
   {
-    font-family: 'Source Sans Pro';
+    font-family: 'futura-pt';
     text-align: justify;
+    font-size: 14pt;
+    line-height: 1.75em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
 a {
@@ -50,9 +60,9 @@ a:hover{
 }
 
 .menu-label{
-  font-family: "trajan-pro-3";
-  font-size: 16pt;
-  font-weight: 200;
+  font-family: "museo-slab";
+  font-size: 18pt;
+  font-weight: 300;
 }
 .header-logo{
   margin-top: 4em;
@@ -62,16 +72,17 @@ a:hover{
 
 .logo-wrapper{
 
-  padding-bottom: 4em;
-  margin-bottom: 3em;
+  padding-bottom: 6em;
+  margin-bottom: 2em;
   border-bottom: solid 2px #F28B79;
     box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #F28B79;
 }
 
 .sw-articles {
+  padding-bottom: 2em;
   border-bottom: solid 2px #F28B79;
     box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #F28B79;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .date
@@ -90,6 +101,11 @@ a:hover{
       box-shadow: 0.125em 0.175em 0 0 rgba(0,0,0,0.125);
     }
 
+.quote{
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 /*********************************************************************************/
 /* BOOTSTRAP OVERRIDES                                                           */
 /*********************************************************************************/
@@ -98,6 +114,21 @@ a:hover{
   border: 1px solid $stone-orange;
   margin: 1em;
   font-family: "bello-pro";
+  
+  .fa:before
+    {
+      display:inline-block;
+      font-family: FontAwesome;
+      font-size: 2em;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      padding-right: .5em;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+  
 }
 
 .btn-default:hover, .btn-default:focus{
@@ -190,7 +221,7 @@ a:hover{
       margin-bottom: 2em;
       padding: 10px;
       border-radius: 6px;
-      border: solid 3px #86D0CB !important;
+      border: solid 2px #86D0CB !important;
       -moz-transition: opacity 0.25s ease-in-out;
       -webkit-transition: opacity 0.25s ease-in-out;
       -o-transition: opacity 0.25s ease-in-out;
@@ -266,6 +297,7 @@ a:hover{
     border-top: solid 8px #F28B79;
     background: #86D0CB;
     margin-bottom: 4px;
+    padding-top: 2em;
     
     
   }
@@ -430,11 +462,12 @@ ul.icons
     {
       display:inline-block;
       font-family: FontAwesome;
-      font-size: 2em;
+      font-size: 1.3em;
       text-decoration: none;
       font-style: normal;
       font-weight: normal;
       line-height: 1;
+      padding-right: .5em;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
     }
