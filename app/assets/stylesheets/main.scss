@@ -11,7 +11,7 @@ $stone-orange: #EF4623;
 
 h1,h2,h3,h4,h5,h6
   {
-    font-family: "museo-slab";
+    font-family: "courier";
     font-weight: 300;
     color: #333;
     margin-top: 5px;
@@ -19,18 +19,18 @@ h1,h2,h3,h4,h5,h6
   }
 
 h2{
-  font-size: 36pt;
+  font-size: 18pt;
 }
 
 h3{
-  font-size: 24pt;
+  font-size: 14pt;
 }
 
 p
   {
-    font-family: 'futura-pt';
+    font-family: 'courier';
     text-align: justify;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 1.75em;
     padding-left: 1em;
     padding-right: 1em;
@@ -38,6 +38,7 @@ p
 
 a {
   color: $stone-blue;
+  font-family: "courier";
   text-decoration: none;
     border-bottom: solid 0px #ddd;
     -moz-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
@@ -60,39 +61,36 @@ a:hover{
 }
 
 .menu-label{
-  font-family: "museo-slab";
-  font-size: 18pt;
+  font-family: "courier";
+  font-size: 14pt;
   font-weight: 300;
 }
 .header-logo{
-  margin-top: 4em;
+
   margin-left: auto;
   margin-right: auto;
 }
 
 .logo-wrapper{
+  margin-bottom: 1.5em;
+  border-bottom: solid 4px $stone-orange;
 
-  padding-bottom: 6em;
-  margin-bottom: 2em;
-  border-bottom: solid 2px #F28B79;
-    box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #F28B79;
 }
 
 .sw-articles {
   padding-bottom: 2em;
-  border-bottom: solid 2px #F28B79;
-    box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #F28B79;
+  border-bottom: solid 3px $stone-orange;
     margin-bottom: 3em;
 }
 
 .date
     {
       text-align: center;
-      font-size: 0.85em;
+      font-size: 8pt;
       letter-spacing: 2px;
       padding: 0.25em 1em 0.25em 1em;
       margin: 1em 0 1em 0;
-      background: #F28b79;
+      background: #000;
       color: #fff;
       font-weight: 400;
       text-transform: uppercase;
@@ -106,6 +104,18 @@ a:hover{
   margin-bottom: 1em;
 }
 
+
+.subnav{
+  font-family: "courier";
+  font-size: 12pt;
+  font-weight: 300;
+  color: #000;
+  
+  a:hover{
+    color: $stone-orange;
+  }
+}
+
 /*********************************************************************************/
 /* BOOTSTRAP OVERRIDES                                                           */
 /*********************************************************************************/
@@ -113,7 +123,7 @@ a:hover{
 .btn{
   border: 1px solid $stone-orange;
   margin: 1em;
-  font-family: "bello-pro";
+  font-family: "courier";
   
   .fa:before
     {
@@ -138,7 +148,7 @@ a:hover{
 }
 
 .btn-text{
-  padding-left: 1em;
+
   font-size: 2em;
 }
 
@@ -148,11 +158,14 @@ a:hover{
   background: #fff;
   letter-spacing: 3px;
   
+  .fa:before{
+    color: #000;
+  }
 }
 
 
 .navbar-nav > li > a{
-  color: $stone-blue !important;
+  color: #000 !important;
   border-bottom: none;
 }
 
@@ -161,8 +174,8 @@ a:hover{
           display: inline-block;
           background: #86D0CB;
           color: #FFF;
-          width: 1em;
-          height: 1em;
+          width: .75em;
+          height: .75em;
           border-radius: 1.65em;
           line-height: 1.65em;
           text-align: center;
@@ -185,7 +198,7 @@ a:hover{
         }
 
 .navbar-nav > li > a:hover{
-  color: #EF4623 !important;
+  color: $stone-orange !important;
   border-bottom-color: rgba(255,255,255,0);
 }
 
@@ -215,13 +228,19 @@ a:hover{
     text-align: center;
   }
   
+.inv-article {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: solid 8px $stone-orange;
+}  
+  
 }
 .image
     {
       margin-bottom: 2em;
       padding: 10px;
       border-radius: 6px;
-      border: solid 2px #86D0CB !important;
+      border: solid 2px #000 !important;
       -moz-transition: opacity 0.25s ease-in-out;
       -webkit-transition: opacity 0.25s ease-in-out;
       -o-transition: opacity 0.25s ease-in-out;
@@ -229,6 +248,12 @@ a:hover{
       transition: opacity 0.25s ease-in-out;
     }
 
+.image-inv{
+  margin-bottom: 2em;
+  padding: 0;
+  border: solid 5px #000;  
+  border-radius: 6px;
+}
 
 @media ( min-width: 768px ) { 
     .navbar > .container {
@@ -246,7 +271,7 @@ a:hover{
 @media (min-width: 768px){
     .navbar-nav {
         position: absolute;
-        top: 3em;
+        top: 1em;
         left: 0;
         width: 100%;
         text-align: center;
@@ -292,15 +317,28 @@ a:hover{
 
 #footer-wrapper
   {
+    font-family: "courier";
+    
     position: relative;
     overflow: hidden;
     border-top: solid 8px #F28B79;
     background: #86D0CB;
     margin-bottom: 4px;
     padding-top: 2em;
+  
+   li{
+     font-family: "courier";
+     color: white;
+     margin-bottom: 2em;
+   }
+  
+   a{
+     color: $stone-orange;
+   }
+  
+}
     
-    
-  }
+  
   
     #footer-wrapper form input.text,
     #footer-wrapper form select,
