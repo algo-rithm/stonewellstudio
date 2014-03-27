@@ -2,7 +2,7 @@
 
 $stone-blue: #86D0CB;
 $stone-orange: #EF4623;
-
+$grid-float-breakpoint: 1200px;
 
 /*********************************************************************************/
 /* Basic                                                                         */
@@ -62,7 +62,7 @@ a:hover{
 
 .menu-label{
   font-family: "courier";
-  font-size: 14pt;
+  font-size: 12pt;
   font-weight: 300;
 }
 .header-logo{
@@ -211,8 +211,8 @@ a:hover{
           display: inline-block;
           background: #86D0CB;
           color: #FFF;
-          width: .75em;
-          height: .75em;
+          width: .5em;
+          height: .5em;
           border-radius: 1.65em;
           line-height: 1.65em;
           text-align: center;
@@ -292,7 +292,7 @@ a:hover{
   border-radius: 6px;
 }
 
-@media ( min-width: 768px ) { 
+@media ( min-width: 992px ) { 
     .navbar > .container {
         text-align: center;
     }
@@ -305,7 +305,7 @@ a:hover{
         clear: none;
     }
 }
-@media (min-width: 768px){
+@media (min-width: 992px){
     .navbar-nav {
         position: absolute;
         top: 1em;
@@ -537,7 +537,7 @@ ul.icons
     {
       display:inline-block;
       font-family: FontAwesome;
-      font-size: 1.3em;
+      font-size: 1.1em;
       text-decoration: none;
       font-style: normal;
       font-weight: normal;

@@ -214,7 +214,7 @@
     line-height: $line-height-computed;
   }
 
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: $screen-sm-max) {
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
       position: static;
@@ -289,7 +289,7 @@
   @extend .form-inline;
 
   .form-group {
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-max) {
       margin-bottom: 5px;
     }
   }
@@ -446,7 +446,7 @@
     }
 
 
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-max) {
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {
@@ -584,7 +584,7 @@
       }
     }
 
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-max) {
       // Dropdowns get custom display
       .open .dropdown-menu {
         > .dropdown-header {
