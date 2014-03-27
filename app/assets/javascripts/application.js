@@ -16,5 +16,3 @@
 //= require turbolinks
 //= require_directory ../../../vendor/assets/javascripts/bootstrap
 //= require_tree .
-
-

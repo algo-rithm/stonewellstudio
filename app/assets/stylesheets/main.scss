@@ -116,12 +116,49 @@ a:hover{
   }
 }
 
+.inv-container{
+  width: 800px !important;
+}
+
+.inventory-menu{
+
+
+  position: fixed;
+  background: white;
+  margin-left: 3em;
+  text-align: left;
+  -moz-transition: display 1s ease-in-out;
+  -webkit-transition: display 1s ease-in-out;
+  -o-transition: display 1s ease-in-out;
+  -ms-transition: display 1s ease-in-out;
+  transition: display 1s ease-in-out;
+  
+  a{
+    color: #000;
+  }
+  
+  a:hover{
+    color: $stone-orange;
+  }
+}
+
+
+
+.inv-hide{
+  display: none;
+  -moz-transition: display 0.25s ease-in-out;
+  -webkit-transition: display 0.25s ease-in-out;
+  -o-transition: display 0.25s ease-in-out;
+  -ms-transition: display 0.25s ease-in-out;
+  transition: display 0.25s ease-in-out;
+}
+
 /*********************************************************************************/
 /* BOOTSTRAP OVERRIDES                                                           */
 /*********************************************************************************/
 
 .btn{
-  border: 1px solid $stone-orange;
+  
   margin: 1em;
   font-family: "courier";
   
@@ -144,7 +181,7 @@ a:hover{
 .btn-default:hover, .btn-default:focus{
   color: $stone-orange;
   background-color: #fff;
-  border: 2px solid $stone-blue;
+  
 }
 
 .btn-text{
