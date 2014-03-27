@@ -21,4 +21,13 @@ class WelcomeController < ApplicationController
   def wholesale
     
   end
+  
+  def collection2013
+  end
+  
+  def collection2014
+    
+  end
+  
+  
 end
