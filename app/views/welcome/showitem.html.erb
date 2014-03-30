@@ -1,20 +1,93 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-5 col-md-offset-2">
-			<%= image_tag @item.imageUrl1, class: "img-responsive center-block image-inv", :alt => "" %>
-			<div class="col-md-4">
-				<%= image_tag @item.imageUrl2, class: "img-responsive center-block image-inv", :alt => "" %>
-			</div>
-			<div class="col-md-4">
-				<%= image_tag @item.imageUrl3, class: "img-responsive center-block image-inv", :alt => "" %>
-			</div>
-			<div class="col-md-4">
-				<%= image_tag @item.imageUrl4, class: "img-responsive center-block image-inv", :alt => "" %>
-			</div>
+		<div id="thumbs" class="col-md-2 navigation">
+			<ul class="thumbs noscript list-unstyled">
+				<li>
+					<%= link_to (image_tag @thumb1, :class => "img-responsive center-block image-thumb", :alt => ""), ("/assets/" + @item.imageUrl1), :class => "thumb" %>
+				</li>
+				<li>
+					<%= link_to (image_tag @thumb2, :class => "img-responsive center-block image-thumb", :alt => ""), ("/assets/" + @item.imageUrl2), :class => "thumb" %>
+				</li>
+				<li>
+					<%= link_to (image_tag @thumb3, :class => "img-responsive center-block image-thumb", :alt => ""), ("/assets/" + @item.imageUrl3), :class => "thumb" %>
+				</li>
+				<li>
+					<%= link_to (image_tag @thumb4, :class => "img-responsive center-block image-thumb", :alt => ""), ("/assets/" + @item.imageUrl4), :class => "thumb" %>
+				</li>	
+			</ul>
+			
 		</div>
+		
+		
+		
+		<div class="col-md-5">
+			<div id="gallery" class="content">
+				<div class="slideshow-container">
+						<div id="loading" class="loader"></div>
+						<div id="slideshow" class="slideshow img-responsive"></div>
+				</div>
+			</div>
+			
+				
+			
+			
+			
+			
+		
+			</div>
+		
 		<div class="col-md-3">
 			<h2><%= @item.name %></h2>
 			<p><%= @item.description %></p>
+			
+			
+			<%= form_for(@contact_form) do |f| %>
+  				
+  				<% if @contact_form.errors.any? %>
+    			<div id="error_explanation">
+      			<h2><%= pluralize(@contact_form.errors.count, "error") %> prohibited this contact_form from being saved:</h2>
+      			<ul>
+      			<% @contact_form.errors.full_messages.each do |msg| %>
+        		<li><%= msg %></li>
+      			<% end %>
+      			</ul>
+    			</div>
+  				<% end %>
+
+  			<div class="field">
+    			<%= f.label :name %><br>
+    			<%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+			
+			
+			
+			
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+			// We only want these styles applied when javascript is enabled
+			$('div.navigation').css({'width' : '300px', 'float' : 'left'});
+			$('div.content').css('display', 'block');
+
+			$(document).ready(function() {				
+				// Initialize Minimal Galleriffic Gallery
+				$('#thumbs').galleriffic({
+					imageContainerSel:      '#slideshow',
+					controlsContainerSel:   '#controls'
+				});
+			});
+		</script>
