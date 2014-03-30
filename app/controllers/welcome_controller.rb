@@ -26,7 +26,11 @@ class WelcomeController < ApplicationController
   end
   
   def collection2014
-    
+    @tunics = CollectionItem.all_tunics
+  end
+  
+  def showitem
+    @item = CollectionItem.find(params[:id])
   end
   
   

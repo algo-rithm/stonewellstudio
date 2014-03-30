@@ -153,6 +153,17 @@ a:hover{
   transition: display 0.25s ease-in-out;
 }
 
+#backtotop{
+  font-family: "courier";
+  padding-bottom: 6px;
+  border-bottom: 2px solid $stone-orange;
+  margin-bottom: 6px;
+}
+
+.sidemenuupperbar{
+  padding-top: 4px;
+  border-top: 2px solid $stone-orange;
+}
 /*********************************************************************************/
 /* BOOTSTRAP OVERRIDES                                                           */
 /*********************************************************************************/

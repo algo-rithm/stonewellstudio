@@ -7,23 +7,24 @@
   			
   			<h2><span class="center-block margin-center">2014 Collection</span></h2>
   			
-  			<div class="row sw-articles">
-  				<div class="col-md-6 ">
-  					<%= image_tag "2014collection/copperGold1x400.jpg", class: "img-responsive center-block image-inv", :alt => "" %>		
+  			<div id="tunic-chunk" class="collection-chunk">
+  				<h2>Tunics</h2>
+  			<% @tunics.each do |tunic| %>
+  				<div class="row sw-articles">
+  					<div class="col-md-6">
+  						<%= image_tag tunic.imageUrl1, class: "img-responsive center-block image-inv", :alt => "" %>
+  					</div>
+  					<div class="col-md-6">
+  						<%= image_tag tunic.imageUrl2, class: "img-responsive center-block image-inv", :alt => "" %>
+  						<%= link_to 'more info..', controller: "welcome", action: "showitem", id: tunic %>
+  					
+  					</div>
   				</div>
-  				<div class="col-md-6">
-  					<%= image_tag "2014collection/copperGold3x400.jpg", class: "img-responsive center-block image-inv", :alt => "" %>
-  				</div>
+  				
+  			<% end %>	
   			</div>
   			
-  			<div class="row sw-articles">
- 				<div class="col-md-6">
-  					<%= image_tag "2014collection/roses3x400.jpg", class: "img-responsive center-block image-inv", :alt => "" %>
-  				</div>
-  				<div class="col-md-6">
-  				<%= image_tag "2014collection/roses1x400.jpg", class: "img-responsive center-block image-inv", :alt => "" %>
-  				</div>
-  			</div>
+  			
   			
   		</div>
   		
@@ -31,7 +32,9 @@
   			
   			<div class="inventory-menu inv-hide">
 				<ul class="list-unstyled">
-					<li>
+					<li><a href="#" id="backtotop" class="fa fa-arrow-up">Back to Top</a></li>
+					<li><a href="#" id="toTunics" class="fa fa-star">Tunics</a></li>
+					<li class="sidemenuupperbar">
 						<a href="/welcome/index" class="fa fa-heart"><span class="menu-label">Home</span></a>
 					</li>
 					<li class="dropdown">
@@ -72,16 +75,29 @@
 </div>
 
 <script>
+	
+	$.fn.scrollBottom = function() { 
+  	return $(document).height() - this.scrollTop() - this.height(); 
+	};
+	
 	$("document").ready(function($){
 		var nav = $('.inventory-menu');
 		
-		
 		$(window).scroll(function(){
-			if ($(this).scrollTop() > 400){
+			if ($(this).scrollTop() > 400 && $(this).scrollBottom() > 50){
 				nav.fadeIn('slow');
 			} else {
 				nav.fadeOut("slow");
 			}
 		});
 	});
+	
+	$("#backtotop").click(function(){
+		$("html, body").animate({scrollTop: 0}, "slow");
+	});
+	
+	$("#toTunics").click(function(){
+		$("html, body").animate({scrollTop: $("#tunic-chunk").offset().top}, 2000);
+	});
+	
 </script>

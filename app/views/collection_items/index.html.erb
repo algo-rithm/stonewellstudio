@@ -1,0 +1,45 @@
+<h1>Listing collection_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Collection group</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Imageurl1</th>
+      <th>Imageurl2</th>
+      <th>Imageurl3</th>
+      <th>Imageurl4</th>
+      <th>Imageurl5</th>
+      <th>Imageurl6</th>
+      <th>Vidurl1</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @collection_items.each do |collection_item| %>
+      <tr>
+        <td><%= collection_item.collection_group_id %></td>
+        <td><%= collection_item.name %></td>
+        <td><%= collection_item.description %></td>
+        <td><%= collection_item.imageUrl1 %></td>
+        <td><%= collection_item.imageUrl2 %></td>
+        <td><%= collection_item.imageUrl3 %></td>
+        <td><%= collection_item.imageUrl4 %></td>
+        <td><%= collection_item.imageUrl5 %></td>
+        <td><%= collection_item.imageUrl6 %></td>
+        <td><%= collection_item.vidUrl1 %></td>
+        <td><%= link_to 'Show', collection_item %></td>
+        <td><%= link_to 'Edit', edit_collection_item_path(collection_item) %></td>
+        <td><%= link_to 'Destroy', collection_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Collection item', new_collection_item_path %>
