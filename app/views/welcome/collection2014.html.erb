@@ -12,10 +12,10 @@
   			<% @tunics.each do |tunic| %>
   				<div class="row sw-articles">
   					<div class="col-md-6">
-  						<%= image_tag tunic.imageUrl1, class: "img-responsive center-block image-inv", :alt => "" %>
+  						<%= link_to (image_tag tunic.imageUrl1, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: tunic %>
   					</div>
   					<div class="col-md-6">
-  						<%= image_tag tunic.imageUrl2, class: "img-responsive center-block image-inv", :alt => "" %>
+  						<%= link_to (image_tag tunic.imageUrl2, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: tunic %>
   						<%= link_to 'more info..', controller: "welcome", action: "showitem", id: tunic %>
   					
   					</div>
