@@ -3,16 +3,16 @@
 		<div id="thumbs" class="col-md-2 navigation">
 			<ul class="thumbs noscript list-unstyled">
 				<li>
-					<%= link_to (image_tag @thumb1, :class => "img-responsive center-block image-thumb", :alt => ""), ("/assets/" + @item.imageUrl1), :class => "thumb" %>
+					<%= link_to (image_tag @thumb1, :class => "img-responsive center-block image-thumb", :alt => ""), (asset_path("/assets/" + @item.imageUrl1)), :class => "thumb" %>
 				</li>
 				<li>
-					<%= link_to (image_tag @thumb2, :class => "img-responsive center-block image-thumb", :alt => ""), ("/assets/" + @item.imageUrl2), :class => "thumb" %>
+					<%= link_to (image_tag @thumb2, :class => "img-responsive center-block image-thumb", :alt => ""), (asset_path("/assets/" + @item.imageUrl2)), :class => "thumb" %>
 				</li>
 				<li>
-					<%= link_to (image_tag @thumb3, :class => "img-responsive center-block image-thumb", :alt => ""), ("/assets/" + @item.imageUrl3), :class => "thumb" %>
+					<%= link_to (image_tag @thumb3, :class => "img-responsive center-block image-thumb", :alt => ""), (asset_path("/assets/" + @item.imageUrl3)), :class => "thumb" %>
 				</li>
 				<li>
-					<%= link_to (image_tag @thumb4, :class => "img-responsive center-block image-thumb", :alt => ""), ("/assets/" + @item.imageUrl4), :class => "thumb" %>
+					<%= link_to (image_tag @thumb4, :class => "img-responsive center-block image-thumb", :alt => ""), (asset_path("/assets/" + @item.imageUrl4)), :class => "thumb" %>
 				</li>	
 			</ul>
 			
