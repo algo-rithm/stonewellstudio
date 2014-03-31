@@ -27,6 +27,7 @@ class WelcomeController < ApplicationController
   
   def collection2014
     @tunics = CollectionItem.all_tunics
+    @kimonos = CollectionItem.all_kimonos
   end
   
   def showitem

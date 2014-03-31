@@ -24,6 +24,23 @@
   			<% end %>	
   			</div>
   			
+  			<div id="kimono-chunk" class="collection-chunk">
+  				<h2>Kimonos</h2>
+  			<% @kimonos.each do |kimono| %>
+  				<div class="row sw-articles">
+  					<div class="col-md-6">
+  						<%= link_to (image_tag kimono.imageUrl1, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: kimono %>
+  					</div>
+  					<div class="col-md-6">
+  						<%= link_to (image_tag kimono.imageUrl2, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: kimono %>
+  						<%= link_to 'more info..', controller: "welcome", action: "showitem", id: kimono %>
+  					
+  					</div>
+  				</div>
+  				
+  			<% end %>	
+  			</div>
+  			
   			
   			
   		</div>
@@ -32,8 +49,9 @@
   			
   			<div class="inventory-menu inv-hide">
 				<ul class="list-unstyled">
-					<li><a href="#" id="backtotop" class="fa fa-arrow-up">Back to Top</a></li>
-					<li><a href="#" id="toTunics" class="fa fa-star">Tunics</a></li>
+					<li><a href="#swnav" id="backtotop" class="fa fa-arrow-up">Back to Top</a></li>
+					<li><a href="#tunic-chunk" id="toTunics" class="fa fa-star">Tunics</a></li>
+					<li><a href="#kimono-chunk" id="toKimonos" class="fa fa-star">Kimonos</a></li>
 					<li class="sidemenuupperbar">
 						
 					</li>
@@ -64,12 +82,22 @@
 		});
 	});
 	
-	$("#backtotop").click(function(){
-		$("html, body").animate({scrollTop: 0}, "slow");
-	});
-	
-	$("#toTunics").click(function(){
-		$("html, body").animate({scrollTop: $("#tunic-chunk").offset().top}, 2000);
-	});
+	$(document)
+    .on('click', 'a[href*="#"]', function() {
+      if ( this.hash && this.pathname === location.pathname ) {
+        $.bbq.pushState( '#/' + this.hash.slice(1) );
+        return false;
+      }
+    })
+    .ready(function() {
+      $(window).bind('hashchange', function(event) {
+        var tgt = location.hash.replace(/^#\/?/,'');
+        if ( document.getElementById(tgt) ) {
+          $.smoothScroll({scrollTarget: '#' + tgt});
+        }
+      });
+
+      $(window).trigger('hashchange');
+    });
 	
 </script>
