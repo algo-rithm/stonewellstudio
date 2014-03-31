@@ -14,7 +14,7 @@
   				<div class="row sw-articles">
   					<div class="col-md-6">
   						<%= link_to (image_tag kimono.imageUrl1, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: kimono %>
-  						<h3><%= kimono.name %></h3>
+  						<h3><%= link_to kimono.name, controller: "welcome", action: "showitem", id: kimono %></h3>
   					</div>
   					<div class="col-md-6">
   						<%= link_to (image_tag kimono.imageUrl2, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: kimono %>
@@ -32,7 +32,7 @@
   				<div class="row sw-articles">
   					<div class="col-md-6">
   						<%= link_to (image_tag tunic.imageUrl1, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: tunic %>
-  						<h3><%= tunic.name %></h3>
+  						<h3><%= link_to tunic.name, controller: "welcome", action: "showitem", id: tunic %></h3>
   					</div>
   					<div class="col-md-6">
   						<%= link_to (image_tag tunic.imageUrl2, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: tunic %>
