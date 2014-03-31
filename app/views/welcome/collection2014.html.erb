@@ -7,12 +7,32 @@
   			
   			<h2><span class="center-block margin-center">2014 Collection</span></h2>
   			
+  			
+  			<div id="kimono-chunk" class="collection-chunk">
+  				<h2><strong>Kimonos</strong></h2>
+  			<% @kimonos.each do |kimono| %>
+  				<div class="row sw-articles">
+  					<div class="col-md-6">
+  						<%= link_to (image_tag kimono.imageUrl1, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: kimono %>
+  						<h3><%= kimono.name %></h3>
+  					</div>
+  					<div class="col-md-6">
+  						<%= link_to (image_tag kimono.imageUrl2, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: kimono %>
+  						<%= link_to 'more info..', controller: "welcome", action: "showitem", id: kimono %>
+  					</div>
+  				</div>
+  				
+  			<% end %>	
+  			</div>	
+  			
+  			
   			<div id="tunic-chunk" class="collection-chunk">
-  				<h2>Tunics</h2>
+  				<h2><strong>Tunics</strong></h2>
   			<% @tunics.each do |tunic| %>
   				<div class="row sw-articles">
   					<div class="col-md-6">
   						<%= link_to (image_tag tunic.imageUrl1, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: tunic %>
+  						<h3><%= tunic.name %></h3>
   					</div>
   					<div class="col-md-6">
   						<%= link_to (image_tag tunic.imageUrl2, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: tunic %>
@@ -24,24 +44,6 @@
   			<% end %>	
   			</div>
   			
-  			<div id="kimono-chunk" class="collection-chunk">
-  				<h2>Kimonos</h2>
-  			<% @kimonos.each do |kimono| %>
-  				<div class="row sw-articles">
-  					<div class="col-md-6">
-  						<%= link_to (image_tag kimono.imageUrl1, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: kimono %>
-  					</div>
-  					<div class="col-md-6">
-  						<%= link_to (image_tag kimono.imageUrl2, class: "img-responsive center-block image-inv", :alt => ""), controller: "welcome", action: "showitem", id: kimono %>
-  						<%= link_to 'more info..', controller: "welcome", action: "showitem", id: kimono %>
-  					
-  					</div>
-  				</div>
-  				
-  			<% end %>	
-  			</div>
-  			
-  			
   			
   		</div>
   		
@@ -50,17 +52,12 @@
   			<div class="inventory-menu inv-hide">
 				<ul class="list-unstyled">
 					<li><a href="#swnav" id="backtotop" class="fa fa-arrow-up">Back to Top</a></li>
-					<li><a href="#tunic-chunk" id="toTunics" class="fa fa-star">Tunics</a></li>
 					<li><a href="#kimono-chunk" id="toKimonos" class="fa fa-star">Kimonos</a></li>
-					<li class="sidemenuupperbar">
-						
-					</li>
-					
-	</ul>
-	</div>
-  </div>
-  
-  
+					<li><a href="#tunic-chunk" id="toTunics" class="fa fa-star">Tunics</a></li>
+					<li class="sidemenuupperbar"></li>	
+				</ul>
+			</div>
+  		</div>
 	</div>
 </div>
 
