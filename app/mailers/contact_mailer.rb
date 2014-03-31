@@ -10,6 +10,6 @@ class ContactMailer < ActionMailer::Base
     @contact_form = contact_form
     @greeting = "Hi"
 
-    mail to: "balanesipf@gmail.com", subject: "New Contact Submitted"
+    mail to: "balanesipf@gmail.com", subject: @contact_form.subject, from: "stonewellstudio.com"
   end
 end

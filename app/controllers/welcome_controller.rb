@@ -42,6 +42,10 @@ class WelcomeController < ApplicationController
     @contact_form = ContactForm.new
   end
   
+  def thankyou
+    
+  end
+  
   private
   
  

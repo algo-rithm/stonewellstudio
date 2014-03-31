@@ -26,21 +26,16 @@
 						<div id="loading" class="loader"></div>
 						<div id="slideshow" class="slideshow img-responsive"></div>
 				</div>
-			</div>
-			
-				
-			
-			
-			
-			
+			</div>	
+		</div>
 		
-			</div>
-		
-		<div class="col-md-3">
+		<div class="col-md-3 contact-form">
 			<h2><%= @item.name %></h2>
 			<p><%= @item.description %></p>
 			
-			
+			<div class="formblock">
+			<p><small><strong>Contact us if you are interested in this piece. We do price by request, and would love to hear from you!</strong></small></p>
+			<br />
 			<%= form_for(@contact_form) do |f| %>
   				
   				<% if @contact_form.errors.any? %>
@@ -56,28 +51,34 @@
 
   			<div class="field">
     			<%= f.label :name %><br>
-    			<%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :message %><br>
-    <%= f.text_area :message %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
-			
-			
-			
-			
+    			<%= f.text_field :name, :size => 31 %>
+  			</div>
+  
+  			<div class="field">
+    			<%= f.label :email %><br>
+    			<%= f.text_field :email, :size => 31 %>
+  			</div>
+  			
+  			<div class="field">
+  				<%= f.label :subject %>
+  				<%= f.text_field :subject, :size => 31, :value => "#{@item.name} - #{@item.collection_group.name.capitalize}"%>
+  			</div>
+  			
+  			<div class="field">
+    			<%= f.label :message %><br>
+    			<%= f.text_area :message, size: "29x10" %>
+  			</div>
+  
+  			<div class="actions">
+    			<%= f.submit :value => "Send Message" %>
+  			</div>
+		<% end %>
+		
+		</div>
 		</div>
 	</div>
 </div>
+
 <script type="text/javascript">
 			// We only want these styles applied when javascript is enabled
 			$('div.navigation').css({'width' : '300px', 'float' : 'left'});
@@ -87,7 +88,8 @@
 				// Initialize Minimal Galleriffic Gallery
 				$('#thumbs').galleriffic({
 					imageContainerSel:      '#slideshow',
-					controlsContainerSel:   '#controls'
+					controlsContainerSel:   '#controls',
+					enableKeyboardNavigation: 'false'
 				});
 			});
 		</script>

@@ -28,7 +28,7 @@ h3{
 
 p
   {
-    font-family: 'courier';
+    font-family: 'Courier New';
     text-align: justify;
     font-size: 12pt;
     line-height: 1.75em;
@@ -122,7 +122,7 @@ a:hover{
 
 .inventory-menu{
 
-
+ 
   position: fixed;
   background: white;
   margin-left: 3em;
@@ -134,6 +134,9 @@ a:hover{
   transition: display 1s ease-in-out;
   
   a{
+    font-family: "courier";
+    font-size: 12pt;
+    font-weight: 300;
     color: #000;
   }
   
@@ -276,12 +279,17 @@ a:hover{
     text-align: center;
   }
   
-.inv-article {
+  .inv-article {
   padding-bottom: 2em;
   margin-bottom: 2em;
   border-bottom: solid 8px $stone-orange;
-}  
+  }  
   
+}
+
+.contact-form {
+  font-size: 10pt;
+  line-height: 1em;
 }
 .image
     {
@@ -350,7 +358,7 @@ a:hover{
           letter-spacing: 3px;
         }
     
-    body, input, textarea{
+    body{
       line-height: 1.65em;
       font-size: 13pt;
       font-weight: 300;
@@ -468,73 +476,23 @@ ul.icons
         display: block;
       }
     
-      form input.text,
-      form select,
-      form textarea
-      {
-        -webkit-appearance: none;
-        display: block;
-        border: 0;
-        background: #e8e8e8;
-        width: 100%;
-        box-shadow: inset 2px 2px 0px 0px rgba(0,0,0,0.1);
-        border-radius: 4px;
-        padding: 0;
-        -moz-transition: background-color 0.25s ease-in-out;
-        -webkit-transition: background-color 0.25s ease-in-out;
-        -o-transition: background-color 0.25s ease-in-out;
-        -ms-transition: background-color 0.25s ease-in-out;
-        transition: background-color 0.25s ease-in-out;
-      }
-
-        form input.text:hover,
-        form select:hover,
-        form textarea:hover
-        {
-        }
-
-        form input.text:focus,
-        form select:focus,
-        form textarea:focus
-        {
-          background: #f0f0f0;
-        }
-        
-        form textarea
-        {
-          min-height: 11em;
-        }
-
-        form .formerize-placeholder
-        {
-          color: #555 !important;
-        }
-
-        form ::-webkit-input-placeholder
-        {
-          color: #555 !important;
-        }
-
-        form :-moz-placeholder
-        {
-          color: #555 !important;
-        }
-
-        form ::-moz-placeholder
-        {
-          color: #555 !important;
-        }
-
-        form :-ms-input-placeholder
-        {
-          color: #555 !important;
-        }
-
-        form ::-moz-focus-inner
-        {
-          border: 0;
-        }
-
+ 
+.formblock{
+  border-top: 2px solid $stone-orange;
+  border-bottom: 2px solid $stone-orange;
+  background: #EDEEF3;
+  padding: 4px;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  
+  input, textarea{
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+  
+  
+} 
+    
 .fa
   {
     text-decoration: none;

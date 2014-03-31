@@ -29,7 +29,7 @@ class ContactFormsController < ApplicationController
     respond_to do |format|
       if @contact_form.save
         ContactMailer.contact_notification(@contact_form).deliver
-        format.html { redirect_to @contact_form, notice: 'Contact form was successfully created.' }
+        format.html { redirect_to controller: 'welcome', action: 'thankyou', notice: 'Contact form was successfully created.' }
         format.json { render action: 'show', status: :created, location: @contact_form }
       else
         format.html { render action: 'new' }
@@ -70,6 +70,6 @@ class ContactFormsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_form_params
-      params.require(:contact_form).permit(:name, :email, :message)
+      params.require(:contact_form).permit(:name, :email, :subject, :message)
     end
 end
