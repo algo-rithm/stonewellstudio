@@ -509,10 +509,30 @@ ul.icons
   input, textarea{
     border: 1px solid black;
     border-radius: 3px;
+    margin-bottom: 1em;
   }
   
   
 } 
+
+.formblock2{
+  width: 60%;
+  border-top: 2px solid $stone-orange;
+  border-bottom: 2px solid $stone-orange;
+  padding-bottom: 2em;
+  margin-top: 3em;
+  
+  input, textarea{
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+  
+  .field{
+    font-size: 10pt;
+    padding: 0;
+    margin: 0;
+  }
+}
     
 .fa
   {
