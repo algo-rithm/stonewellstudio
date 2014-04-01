@@ -1,2 +1,48 @@
-<h1>Welcome#services</h1>
-<p>Find me in app/views/welcome/services.html.erb</p>
+
+<div class="container">
+	<div id="services-block" class="row">
+		<div class="col-md-12">
+			<div class="col-md-6">
+				<%= image_tag "custom.jpg", class: "img-responsive center-block", alt: "" %>
+			</div>
+			<div class="col-md-6">
+				<p>
+					We do custom clothing and offer one-of-a-kind items for wholesale. Contact us, call us, email us, just come hang out
+					 with us in our shop. If it's anything clothing or art related we can help or point you into the right direction! 
+				</p>
+				<div class="formblock3 center-block">
+			<p<h3>Contact us</h3>
+						
+			<%= form_for(@contact_form) do |f| %>
+
+  			<div class="field">
+    			<%= f.label :name %>
+    			<%= f.text_field :name, :size => 37 %>
+  			</div>
+  
+  			<div class="field">
+    			<%= f.label :email %>
+    			<%= f.text_field :email, :size => 37 %>
+  			</div>
+  			
+  			<div class="field">
+  				<%= f.label :subject %>
+  				<%= f.text_field :subject, :size => 37 %>
+  			</div>
+  			
+  			<div class="field">
+    			<%= f.label :message %>
+    			<%= f.text_area :message, size: "34x5" %>
+  			</div>
+  
+  			<div class="actions">
+  				<br />
+    			<%= f.submit :value => "Send Message" %>
+  			</div>
+		<% end %>
+		</div>
+			</div>
+		</div>
+	</div>
+	
+</div>

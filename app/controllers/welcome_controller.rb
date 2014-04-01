@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
   end
 
   def services
+    @contact_form = ContactForm.new
   end
 
   def inventory
