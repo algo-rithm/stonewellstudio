@@ -259,11 +259,32 @@ a:hover{
 
 
 /*********************************************************************************/
-/* Navbar                                                                         */
+/* Bio                                                                       */
 /*********************************************************************************/
 
+#michelle-bio{
+  background: $stone-blue;
+  color: #333;
+  padding: 1em;
+  
+  a{
+    color: #fff;
+  }
+}
 
+#pete-bio{
+  padding: 1em;
+}
 
+#shop-bio{
+  background: $stone-blue;
+  color: #333;
+  padding: 1em;
+  
+  img{
+    margin-top: 0.5em;
+  }
+}
 
 
 
