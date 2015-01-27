@@ -17,10 +17,11 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: stonewellstudio_development
+  database: stonewellstudio_dev
   pool: 5
-  username: StoneBoss
-  password: chance22
+  host: localhost
+  username: action
+  password: 
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,13 +49,15 @@ test:
   encoding: unicode
   database: stonewellstudio_test
   pool: 5
-  username: stonewellstudio
+  host: localhost
+  username: action
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: stonewellstudio_production
+  database: stonewellstudio_prod
   pool: 5
-  username: stonewellstudio
+  host: localhost
+  username: action
   password:
