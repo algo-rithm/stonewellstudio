@@ -57,54 +57,5 @@
 			</div>
 		</div>
 	</div>
-	<div id="shop-bio" class="row">
-		<div class="col-md-12">
-			<div class="col-md-6">
-				<p><small>
-					We moved into Stonewell Studios in the summer of 2013, located at 10 York Street, Hanover PA. We are in full production
-					 getting silk sheets stretched, paint brushes dripping and outfits dirty. We paint for a steady production of one of a kind
-					  scarves, tunics, and kimono capes. 
-				</small></p>
-				
-				<div class="formblock2 center-block">
-			<p><h3>Contact us</h3></p>
-						
-			<%= form_for(@contact_form) do |f| %>
 
-  			<div class="field">
-    			<%= f.label :name %>
-    			<%= f.text_field :name, :size => 37 %>
-  			</div>
-  
-  			<div class="field">
-    			<%= f.label :email %>
-    			<%= f.text_field :email, :size => 37 %>
-  			</div>
-  			
-  			<div class="field">
-  				<%= f.label :subject %>
-  				<%= f.text_field :subject, :size => 37 %>
-  			</div>
-  			
-  			<div class="field">
-    			<%= f.label :message %>
-    			<%= f.text_area :message, size: "34x10" %>
-  			</div>
-  
-  			<div class="actions">
-  				<br />
-    			<%= f.submit :value => "Send Message" %>
-  			</div>
-		<% end %>
-		</div>
-			</div>
-			
-			<div class="col-md-6">
-				<%= image_tag "storefront.jpg", class: "img-responsive center-block", alt: "" %>
-				<%= image_tag "store.jpg", class: "img-responsive center-block", alt: "" %>
-				<%= image_tag "thestoreandI.jpg", class: "img-responsive center-block", alt: "" %>
-			</div>
-		
-	</div>
-</div>
 </div>
