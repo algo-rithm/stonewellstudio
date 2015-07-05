@@ -72,15 +72,12 @@ a:hover{
 }
 
 .logo-wrapper{
-  margin-bottom: 1.5em;
-  border-bottom: solid 4px $stone-orange;
-
+  margin-bottom: 0.5em;
 }
 
 .sw-articles {
   padding-bottom: 2em;
-  border-bottom: solid 3px $stone-orange;
-    margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
 .date
@@ -422,15 +419,13 @@ a:hover{
     font-family: "courier";
     
     position: relative;
-    overflow: hidden;
-    border-top: solid 8px #F28B79;
-    background: #96ded1;
+    overflow: hidden;    
     margin-bottom: 4px;
     padding-top: 0.75em;
   
    li{
      font-family: "courier";
-     color: white;
+     color: black;
      margin-bottom: 1em;
    }
   
@@ -483,7 +478,7 @@ ul.icons
         top: 1.5em;
         display: block;
         background: #EF4623;
-        color: #FFF;
+        color: #AAA;
         width: 1.65em;
         height: 1.65em;
         border-radius: 1.65em;
